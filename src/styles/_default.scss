@@ -1,0 +1,57 @@
+@import './colors';
+
+
+html {
+
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+   min-width: 100%;
+     overflow-x: hidden;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+ 
+   
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+svg{
+    
+    pointer-events: none;
+}
+
+body {
+    
+    line-height: 1.75;
+    overflow-x: hidden;
+    font-family: 'Poppins',
+    sans-serif;
+   
+  
+ 
+  
+}
+
+
+html, body{
+    height: 100%;
+}

@@ -1,0 +1,30 @@
+.title{
+    font-size: 1.5rem;
+   line-height: 2.25rem;
+   letter-spacing: -0.48px;
+   font-weight: 700;
+}
+.emp{
+    font-size: 1rem;
+    line-height: 1.5rem;
+     font-weight: 500;
+}
+
+@mixin  button {
+    padding: 0.571em 1.143em;
+    font-size: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    appearance: none;
+    border-radius: 4px;
+    border: none;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    
+}
+.bt-text{
+     font-size: 1rem;
+     text-align: center;
+     text-transform: uppercase;
+     line-height: 1.5rem;
+}
