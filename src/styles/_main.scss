@@ -45,3 +45,29 @@ nav{
           padding-left: 1em;
       }
 }
+
+.table--section,
+.todo--section{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--grey);
+    border-radius: 4px;
+    margin: 0 1em;
+}
+.todo--section{
+    h3{
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--cont);
+
+    }
+}
+.timer--section{
+    p{
+         font-size: 0.8rem;
+         font-weight: 600;
+          color: var(--green);
+    }
+}
