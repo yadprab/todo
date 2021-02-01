@@ -2,13 +2,16 @@ import React, { useReducer, useState } from 'react'
 import { Table } from "./Table";
 
 import {Todo} from './Todo';
+import { v4 as uuidv4 } from "uuid";
+export const TodoTask = React.createContext ();
 const reducer = (currentState, action) => {
     switch (action.type) {
         case 'todo':
      return{
          ...currentState,
          todos:[...currentState.todos, action.payLoad],
-         state:!currentState.state,
+         state:true,
+         
      }
         default:
             return currentState
@@ -16,11 +19,14 @@ const reducer = (currentState, action) => {
     
 }
 const initialState = {
+  id:uuidv4(),
     todos:[],
     state:false
 }
 const Input=()=> {
     const [todo, setTodo] = useState('');
+
+    const [timer, setTimer] = useState(false);
     const [state, dispatch]= useReducer(reducer, initialState);
 
     const handleChange = (e) => {
@@ -40,6 +46,11 @@ const Input=()=> {
         dispatch({type:'todo', payLoad:todo});
 
         setTodo('');
+        setTimer(true);
+       
+    
+
+     
         
     }
     return (
@@ -54,9 +65,14 @@ const Input=()=> {
         </form>
         <Table />
         {state.todos.map(t=>{
-            return(
-               <Todo todo={t} key={todo} state={state.state}/>
-            )
+            return (
+              <TodoTask.Provider
+                value={{ t, state: state.state, setTimer, timer }}
+                key={state.id}
+              >
+                <Todo key={state.id} />
+              </TodoTask.Provider>
+            );
         })}
       </>
     );

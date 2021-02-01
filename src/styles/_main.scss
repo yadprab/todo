@@ -57,17 +57,23 @@ nav{
     margin: 0 1em;
 }
 .todo--section{
-    h3{
+    h3:not(.title){
         font-size: 0.8rem;
         text-transform: uppercase;
         color: var(--cont);
 
     }
+    .completed{
+        font-size: 0.8rem;
+        color: var(--red);
+    }
 }
 .timer--section{
     p{
          font-size: 0.8rem;
-         font-weight: 600;
-          color: var(--green);
+        
+     
     }
 }
+
+@import './Timer';

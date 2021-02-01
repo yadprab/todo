@@ -5,7 +5,7 @@ const Table=()=>{
         <>
         <section className='table--section'>
          <h3 className='emp'> Taskname </h3>
-          <h3 className='emp'>Timer</h3>
+          <h3 className='emp'>status</h3>
         </section>
             
         </>
