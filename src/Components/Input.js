@@ -64,11 +64,12 @@ const Input=()=> {
           </section>
         </form>
         <Table />
-        {state.todos.map(t=>{
+        {state.todos.map((t,index)=>{
             return (
               <TodoTask.Provider
                 value={{ t, state: state.state, setTimer, timer }}
-                key={state.id}
+                key={index}
+               
               >
                 <Todo key={state.id} />
               </TodoTask.Provider>

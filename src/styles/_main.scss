@@ -1,53 +1,56 @@
-nav{
+nav {
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    h1{
+
+    h1 {
         color: var(--red);
     }
-    button{
+
+    button {
         appearance: none;
         border: none;
         background-color: unset;
     }
 
-}    
+}
 
-.title--section{
+.title--section {
     padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    h2{
+    h2 {
         color: var(--purple);
     }
 }
-.input--section{
-    padding: 1em;
-     display: grid;
-     grid-template-columns: 1fr auto;
-     gap: 0.5rem;
-      button{
-          @include button;
-          background-color: var(--cont);
-          cursor: pointer;
-          color: var(--white);
-          font-weight: 500;
-      }
 
-      input{
-          appearance: none;
-          border: 1px solid rgba($color: #000000, $alpha: 0.3);
-          border-radius: 4px;
-          padding-left: 1em;
-      }
+.input--section {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+
+    button {
+        @include button;
+        background-color: var(--cont);
+        cursor: pointer;
+        color: var(--white);
+        font-weight: 500;
+    }
+
+    input {
+        appearance: none;
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+        border-radius: 4px;
+        padding-left: 1em;
+    }
 }
 
 .table--section,
-.todo--section{
+.todo--section {
     padding: 1em;
     display: flex;
     justify-content: space-between;
@@ -56,24 +59,29 @@ nav{
     border-radius: 4px;
     margin: 0 1em;
 }
-.todo--section{
-    h3:not(.title){
+
+.todo--section {
+    h3:not(.title) {
         font-size: 0.8rem;
         text-transform: uppercase;
         color: var(--cont);
 
     }
-    .completed{
+
+    .completed {
         font-size: 0.8rem;
         color: var(--red);
     }
 }
-.timer--section{
-    p{
-         font-size: 0.8rem;
-        
-     
+
+.timer--section {
+    p {
+        font-size: 0.8rem;
+
+
     }
 }
 
 @import './Timer';
+
+@import './Break';
