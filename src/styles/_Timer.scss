@@ -61,13 +61,19 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     border-radius: 50px;
-
-    button{
-        @include button;
+     button {
+         @include button;
          background-color: var(--grey);
          cursor: pointer;
          font-weight: 500;
+         &:hover{
+             color: var(--cont);
+         }
 
-    }
+
+     }
+
+   
 
 }
+

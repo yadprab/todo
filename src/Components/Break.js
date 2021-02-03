@@ -1,17 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {TimerData} from './Timer';
 const Break=()=> {
 
     const timerDT = useContext(TimerData);
+    const [type, setType] = useState();
 
     const handleChange =(e)=>{
-      timerDT.setMin((parseInt(e.target.value)*60))
-     
+     const breakTime = parseInt(e.target.value) * 60;
+     setType(breakTime)
     }
        const handleClick = () => {
          timerDT.setPaused(false);
          timerDT.setBreak(false);
          timerDT.setColor(timerDT.colors.short)
+         timerDT.setMin(type);
        };
     return (
       <>
@@ -32,7 +34,7 @@ const Break=()=> {
                     min="1"
                     max="5"
                     placeholder="5 minutes"
-                    onChange={handleChange}
+                    onChange={(e)=>{handleChange(e)}}
                   />
                 </form>
                 <button id="short--break--button" onClick={handleClick}>
@@ -61,6 +63,7 @@ const Break=()=> {
               id="close--button"
               onClick={() => {
                 timerDT.setBreak(false);
+              
               }}
             >
               <svg

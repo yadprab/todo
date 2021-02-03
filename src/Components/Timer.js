@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { TodoTask } from "./Input";
 import { Break } from "./Break";
-export const TimerData = React.createContext ();
+export const TimerData = React.createContext();
 const Timer = () => {
-    const colors = {
-      blue: "#4A8BFF",
-      red: "#cd5a57",
-      dark: "#444b5b",
-      short: "#8c65D3",
-    };
+  const colors = {
+    blue: "#4A8BFF",
+    red: "#cd5a57",
+    dark: "#444b5b",
+    short: "#8c65D3",
+  };
   const [min, setMin] = useState(1500);
 
   const [stroke, setStroke] = useState(283);
@@ -23,25 +23,22 @@ const Timer = () => {
 
 
 
-  const timeFraction = () => {
-    return min / 60 / (1500 / 60);
-  };
-  const setCircleDasharray = () => {
-    const circleDasharray = `${(timeFraction() * 283).toFixed(0)} 283`;
-
-    setStroke(circleDasharray);
-  };
-
   useEffect(() => {
+      const timeFraction = () => {
+        return min / 60 / (1500 / 60);
+      };
+    const setCircleDasharray = () => {
+      const circleDasharray = `${(timeFraction() * 283).toFixed(0)} 283`;
+
+      setStroke(circleDasharray);
+    };
     const init = setInterval(() => {
       if (!pause) {
         setMin((s) => s - 1);
-          setColor(colors.blue);
-      
 
-         if (min<=300) {
-              setColor(colors.red);
-         }
+        if (min <= 300) {
+          setColor(colors.red);
+        }
 
         if (min === 0) {
           todo.setTimer(false);
@@ -66,6 +63,7 @@ const Timer = () => {
   const reset = () => {
     setPaused(true);
     setMin(1500);
+    setColor(colors.blue);
   };
 
   return (
@@ -105,7 +103,7 @@ const Timer = () => {
                 : `${Math.floor(min / 60)}:${("00" + (min % 60)).slice(-2)}`}
             </p>
           </section>
-          <section className="button--section">
+          <section className="button--section ">
             <button
               id="pauseButton"
               className="bt-text"
@@ -125,7 +123,19 @@ const Timer = () => {
             </button>
           </section>
           {TakeBreak && (
-            <TimerData.Provider value={{TakeBreak, setBreak, min, setMin, pause, setPaused, colors, setColor}}>
+            <TimerData.Provider
+              value={{
+                TakeBreak,
+                setBreak,
+                min,
+                setMin,
+                pause,
+                setPaused,
+                colors,
+                setColor,
+                reset
+              }}
+            >
               <Break />
             </TimerData.Provider>
           )}

@@ -1,4 +1,4 @@
-.break--main{
+.break--main {
     position: absolute;
     top: 0;
     left: 0;
@@ -9,7 +9,8 @@
     place-items: center;
     padding: 1em;
 }
-.break--container{
+
+.break--container {
     position: absolute;
     max-width: 375px;
     padding: 1em;
@@ -19,31 +20,33 @@
     transform: scaleY(0);
     opacity: 0;
     transition: transform 0.4s ease-in 0.2s;
-     article {
-         padding: 16px;
-         opacity: 0;
-         transition: opacity 0.4s ease-in 0.4s;
-     }
 
-     h3 {
-         padding-left: 16px;
-         color: var(--purple);
-         opacity: 0;
-         transition: opacity 0.4s ease-in 0.4s;
-     }
-    
+    article {
+        padding: 16px;
+        opacity: 0;
+        transition: opacity 0.4s ease-in 0.4s;
+    }
+
+    h3 {
+        padding-left: 16px;
+        color: var(--purple);
+        opacity: 0;
+        transition: opacity 0.4s ease-in 0.4s;
+    }
+
 }
 
-.type--area{
-    article{
+.type--area {
+    article {
         display: grid;
         grid-template-columns: auto auto;
         gap: 1.5rem;
-        h4{
+
+        h4 {
             align-self: center;
         }
 
-        input{
+        input {
             appearance: none;
             border: none;
             background-color: #fafafa;
@@ -51,12 +54,12 @@
             padding-left: 1em;
         }
 
-        button{
+        button {
             @include button;
             background-color: #212121;
             color: var(--grey);
-           
-           
+
+
             cursor: pointer;
             align-self: stretch;
             width: 100%;
@@ -65,36 +68,40 @@
     }
 }
 
-.grow{
-    animation:  grow 0.4s ease-in-out 0.2s forwards;
+.grow {
+    animation: grow 0.4s ease-in-out 0.2s forwards;
 
-    h3,article{
-  animation: opa 0.4s ease-in-out 0.4s forwards
+    h3,
+    article {
+        animation: opa 0.4s ease-in-out 0.4s forwards
     }
 }
 
-@keyframes grow{
-    0%{
+@keyframes grow {
+    0% {
         opacity: 0;
         transform: scaleY(0);
     }
-    100%{
+
+    100% {
         transform: scaleY(1);
         opacity: 1;
     }
 }
+
 @keyframes opa {
     0% {
         opacity: 0;
-       
+
     }
 
     100% {
-       
+
         opacity: 1;
     }
 }
-#close--button{
+
+#close--button {
     appearance: none;
     border: none;
     background-color: unset;
@@ -102,4 +109,16 @@
     top: 16px;
     right: 16px;
     cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
