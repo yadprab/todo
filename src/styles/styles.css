@@ -368,6 +368,7 @@ nav button {
   background-color: #fafafa;
   height: 38px;
   padding-left: 1em;
+  width: 100%;
 }
 
 .type--area article button {
