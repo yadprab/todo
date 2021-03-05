@@ -1,15 +1,11 @@
-import {Input}from './Components/Input'
-import { Nav} from "./Components/Nav";
-import { Title } from "./Components/Title";
 
 import './styles/styles.css';
+import {LandingPge} from './Components/LandingPage/LandingPge';
 function App() {
   return (
     <>
-      <Nav />
-      <Title />
-      <Input />
-      
+    <LandingPge/>
+     
     </>
   );
 }

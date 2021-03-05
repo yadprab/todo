@@ -3,6 +3,7 @@ import { TodoTask } from "./Input";
 import { Break } from "./Break";
 export const TimerData = React.createContext();
 const Timer = () => {
+
   const colors = {
     blue: "#4A8BFF",
     red: "#cd5a57",
@@ -24,6 +25,8 @@ const Timer = () => {
 
 
   useEffect(() => {
+    
+
       const timeFraction = () => {
         return min / 60 / (1500 / 60);
       };
@@ -50,6 +53,7 @@ const Timer = () => {
 
     return () => {
       clearInterval(init);
+    
     };
   });
 

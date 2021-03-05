@@ -4,7 +4,10 @@ const Nav=()=> {
     return (
       <>
         <nav>
-          <h1 className="title">Do or Do not</h1>
+          <section className='logo--section'>
+          <img src="./logo.png" alt="logo"/>
+
+          </section>
 
           <button id="nav--button">
             <svg

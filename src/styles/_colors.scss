@@ -1,10 +1,20 @@
 :root{
-    --black:#000;
-    --purple:#14213D;
-    --cont:#4A8BFF;
-    --red:#FF3636;
-    --white:#fff;
-    --grey:#FAFAFA;
-    --green:#1BC060;
+   --base:#CC3B36;
+   --text:#220100;
+   --bg:#EFFCF1;
+   --bg2:#fdfdfd;
+   --hover:#b83531;
+
+   //circle
+   --circle1:#3DE654;
+   --circle2:#E66D3D;
+   --circle3:#E63D86;
+   --break:#333333;
+
+       --font1: 'Archivo',
+       sans-serif;
+
+       --font2: 'Roboto',
+       sans-serif;
 
 }

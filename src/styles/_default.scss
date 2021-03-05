@@ -1,4 +1,3 @@
-@import './colors';
 
 
 html {
@@ -34,28 +33,8 @@ a {
     text-decoration: none;
 }
 
-svg{
-    
+svg:not(.base-timer__svg) {
+    width: 24px;
+    height: 24px;
     pointer-events: none;
-}
-
-body {
-    
-    line-height: 1.75;
-    overflow-x: hidden;
-    font-family: 'Poppins',
-    sans-serif;
-   
-  
- 
-  
-}
-
-
-html, body{
-    height: 100%;
-}
-
-#root{
-    max-width:480px;
 }
