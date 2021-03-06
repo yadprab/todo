@@ -38,7 +38,7 @@ main {
     transition: transform linear;
 
     &:hover {
-        background-color:var(--hover);
+        background-color: var(--hover);
     }
 
     &:active {
@@ -81,15 +81,15 @@ main {
     }
 }
 
-.form--control{
+.form--control {
     display: flex;
     flex-direction: column;
-   
-    label{
+
+    label {
         color: var(--text);
         letter-spacing: 0.04em;
     }
-    
+
 }
 
 .disabled {
@@ -104,7 +104,7 @@ main {
     }
 }
 
-.pomo--main{
+.pomo--main {
     position: absolute;
     top: 0;
     right: 0;
@@ -112,19 +112,21 @@ main {
     bottom: 0;
     overflow: hidden;
     background-image: unset;
-    background-color:var(--bg2);
+    background-color: var(--bg2);
 }
-.timer--section{
+
+.timer--section {
     position: relative;
     width: 250px;
     height: 250px;
-    align-self: flex-start;
-    justify-self: center;
-    p{
+    place-self: center;
+    margin-bottom: 2em;
+
+    p {
         position: absolute;
         top: 50%;
         left: 50%;
-       
+
         transform: translate(-50%, -50%);
         font-size: 24px;
         font-weight: 700;
@@ -132,31 +134,36 @@ main {
     }
 }
 
-.footer--section{
+.footer--section {
     position: fixed;
     bottom: 0px;
     left: 0;
     right: 0;
-    background-color:#fff ;
-    box-shadow: 0px 5px 10px -2px rgba($color: #000000, $alpha: 0.5);
+    background-color: #fff;
+    box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
     padding: 1em;
     border-radius: 20px;
 
-    .task{
+    button {
+        min-width: 96px;
+    }
+
+    .task {
         display: grid;
         grid-template-columns: 1fr auto;
         padding: 1em;
-       
-        align-items: center;
-       
 
-        h3{
+        align-items: center;
+
+
+        h3 {
             margin: 0;
             font-size: 1.25rem;
         }
     }
 }
-.button--section{
+
+.button--section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,13 +171,56 @@ main {
     margin-top: 1.5em;
 
 
-    button{
+    button {
         appearance: none;
         border: none;
         cursor: pointer;
+        background-color: unset;
 
-        svg{
+        &:active {
+            transform: scale(.98);
+        }
+
+        svg {
             fill: #212121;
         }
     }
 }
+
+.base-timer__path-remaining {
+
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear transform;
+
+
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.initial {
+    stroke: var(--circle1);
+}
+
+.middle {
+    stroke: var(--circle2);
+}
+
+.end {
+    stroke: var(--circle3);
+}
+
+.close--button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    appearance: none;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    padding: 1em;
+
+}
+@import './Break'

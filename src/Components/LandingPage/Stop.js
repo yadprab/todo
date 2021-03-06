@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PauseSvg() {
+function Stop() {
     return (
       <>
         {/*?xml version="1.0" encoding="iso-8859-1"?*/}
@@ -12,17 +12,15 @@ function PauseSvg() {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           x="0px"
           y="0px"
-          viewBox="0 0 60 60"
-          style={{ enableBackground: "new 0 0 60 60" }}
+          viewBox="0 0 46.734 46.734"
+          style={{ enableBackground: "new 0 0 46.734 46.734" }}
           xmlSpace="preserve"
         >
           <g>
             <path
-              d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-		S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"
+              d="M41.346,0H5.388C2.417,0,0,2.417,0,5.388v35.958c0,2.971,2.417,5.388,5.388,5.388h35.958c2.971,0,5.388-2.417,5.388-5.388
+		V5.388C46.733,2.417,44.316,0,41.346,0z"
             />
-            <path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z" />
-            <path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z" />
           </g>
           <g></g>
           <g></g>
@@ -44,5 +42,4 @@ function PauseSvg() {
     );
 }
 
-export  {PauseSvg
-}
+export { Stop}

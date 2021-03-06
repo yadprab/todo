@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { dataContext } from "../Context";
+import {Close} from '../Close';
 function Input() {
   const [InputVal, setVal] = useState({
     TaskName: "",
@@ -35,6 +36,7 @@ function Input() {
   return (
     <>
       <section className="floating--section">
+      <Close/>
         <article className='from--modal'>
           <article className="form--control">
             <label htmlFor="task">Add Taskname</label>

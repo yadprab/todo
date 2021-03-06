@@ -1,28 +1,29 @@
 import React from 'react'
 
-function PauseSvg() {
+function PlaySvg() {
     return (
       <>
         {/*?xml version="1.0" encoding="iso-8859-1"?*/}
         {/* Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  */}
         <svg
           version="1.1"
-          id="Capa_1"
+          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           x="0px"
           y="0px"
-          viewBox="0 0 60 60"
-          style={{ enableBackground: "new 0 0 60 60" }}
+          viewBox="0 0 485 485"
+          style={{ enableBackground: "new 0 0 485 485" }}
           xmlSpace="preserve"
         >
           <g>
             <path
-              d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-		S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"
+              d="M413.974,71.026C368.171,25.225,307.274,0,242.5,0S116.829,25.225,71.026,71.026C25.225,116.829,0,177.726,0,242.5
+		s25.225,125.671,71.026,171.474C116.829,459.775,177.726,485,242.5,485s125.671-25.225,171.474-71.026
+		C459.775,368.171,485,307.274,485,242.5S459.775,116.829,413.974,71.026z M242.5,455C125.327,455,30,359.673,30,242.5
+		S125.327,30,242.5,30S455,125.327,455,242.5S359.673,455,242.5,455z"
             />
-            <path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z" />
-            <path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z" />
+            <polygon points="181.062,336.575 343.938,242.5 181.062,148.425 	" />
           </g>
           <g></g>
           <g></g>
@@ -44,5 +45,4 @@ function PauseSvg() {
     );
 }
 
-export  {PauseSvg
-}
+export {PlaySvg}

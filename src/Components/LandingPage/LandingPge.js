@@ -4,14 +4,20 @@ import { Input } from "./Input";
 import {TimerSection} from './TimerSection';
 import { dataContext } from "../Context";
 function LandingPge() {
-  const [Data, setData] = useState({
+
+  const nonMutable = {
     break: false,
     startTimer: false,
     form: false,
-    TaskName:'',
-    pause:false,
-    stop:false,
-    reset:false
+    TaskName: "",
+    pause: false,
+    stop: false,
+    reset: false,
+    min: 1500,
+  };
+  const [Data, setData] = useState({
+   ...nonMutable
+    
   });
   return (
     <>
@@ -33,7 +39,7 @@ function LandingPge() {
           </button>
         </section>
       </main>
-      <dataContext.Provider value={{ Data, setData }}>
+      <dataContext.Provider value={{ Data, setData, nonMutable }}>
         {Data.form && <Input />}
         {Data.startTimer && <TimerSection />}
       </dataContext.Provider>
