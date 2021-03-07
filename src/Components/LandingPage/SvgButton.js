@@ -12,9 +12,10 @@ function SvgButton() {
     
     setData({
       ...Data,
-      pause:!Data.pause,
-      reset:false,
-    })
+      pause: !Data.pause,
+      reset: false,
+      break: false,
+    });
   }
 
   const setReset = () => {
@@ -22,7 +23,8 @@ function SvgButton() {
       ...Data,
       pause:true,
       min:1500,
-      reset:true
+      reset:true,
+       break: false,
     
     })
   }
@@ -31,8 +33,8 @@ function SvgButton() {
     setData({
       ...Data,
       pause: true,
-     
-      stop:true
+      break: false,
+      stop: true,
     });
   };
     

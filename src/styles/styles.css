@@ -124,15 +124,6 @@ nav {
       align-self: flex-start;
 }
 
-nav button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  cursor: pointer;
-  background-color: unset;
-}
-
 main {
   padding: 56px 16px;
   background-image: url(../BG/Android.png);
@@ -142,7 +133,6 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  max-width: 480px;
   height: 100vh;
 }
 
@@ -262,14 +252,17 @@ main {
   overflow: hidden;
   background-image: unset;
   background-color: var(--bg2);
+  display: -ms-grid;
+  display: grid;
 }
 
 .timer--section {
   position: relative;
   width: 250px;
   height: 250px;
-  place-self: center;
-  margin-bottom: 2em;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 4em 0;
 }
 
 .timer--section p {
@@ -288,8 +281,8 @@ main {
   left: 0;
   right: 0;
   background-color: #fff;
-  -webkit-box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.5);
   padding: 1em;
   border-radius: 20px;
 }
@@ -344,6 +337,45 @@ main {
 
 .button--section button svg {
   fill: #212121;
+}
+
+#color-1 {
+  background-color: var(--circle1);
+}
+
+#color-2 {
+  background-color: var(--circle2);
+}
+
+#color-3 {
+  background-color: var(--circle3);
+}
+
+.color--section h3 {
+  font-size: 1.25rem;
+  font-family: var(--font2);
+}
+
+.color--section button {
+  min-width: unset;
+}
+
+.color--button {
+  width: 24px;
+  height: 24px;
+  background-color: unset;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  margin: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color--button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .base-timer__path-remaining {
@@ -420,6 +452,19 @@ main {
   bottom: -4px;
 }
 
+.break--section .break--close {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: unset;
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
+  min-width: unset;
+}
+
 .break--button {
   padding: 8px 16px;
   font-size: 0.8rem;
@@ -447,5 +492,110 @@ main {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+@media screen and (min-width: 481px) {
+  main {
+    background-image: url(../BG/desktop.png);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  main {
+    padding: 120px 48px;
+  }
+  .intro--section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro--section h1 {
+    font-size: 3rem;
+  }
+  .intro--section p {
+    max-width: 40ch;
+    text-align: center;
+  }
+  .intro--section .button {
+    font-size: 1rem;
+    min-width: 200px;
+  }
+  nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .from--modal {
+    -ms-grid-columns: (500px)[1];
+        grid-template-columns: repeat(1, 500px);
+  }
+  .pomo--main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+  }
+  .pomo--main .footer--section {
+    position: static;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-rows: auto;
+    height: 500px;
+    place-self: center;
+  }
+  .pomo--main .footer--section .task {
+    display: -ms-grid;
+    display: grid;
+    margin-top: 3em;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content;
+    gap: 1rem;
+  }
+  .pomo--main .timer--section {
+    width: 350px;
+    height: 350px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .pomo--main .timer--section p {
+    font-size: 3rem;
+  }
+  .break--section {
+    bottom: unset;
+    right: 200px;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  @-webkit-keyframes show {
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes show {
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+}
+
+.active {
+  border: 3px solid #4d4d4d;
 }
 /*# sourceMappingURL=styles.css.map */

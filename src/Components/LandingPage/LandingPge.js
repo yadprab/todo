@@ -14,6 +14,7 @@ function LandingPge() {
     stop: false,
     reset: false,
     min: 1500,
+    color:'initial'
   };
   const [Data, setData] = useState({
    ...nonMutable
@@ -38,11 +39,12 @@ function LandingPge() {
             Create Task
           </button>
         </section>
+
+        <dataContext.Provider value={{ Data, setData, nonMutable }}>
+          {Data.form && <Input />}
+          {Data.startTimer && <TimerSection />}
+        </dataContext.Provider>
       </main>
-      <dataContext.Provider value={{ Data, setData, nonMutable }}>
-        {Data.form && <Input />}
-        {Data.startTimer && <TimerSection />}
-      </dataContext.Provider>
     </>
   );
 }

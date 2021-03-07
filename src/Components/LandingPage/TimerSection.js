@@ -5,11 +5,11 @@ import { Close } from "../Close";
 function TimerSection() {
     return (
       <>
-        <main className="pomo--main">
+        <section className="pomo--main">
           <Timer />
           <Footer />
           <Close/>
-        </main>
+        </section>
       </>
     );
 }

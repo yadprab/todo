@@ -3,6 +3,7 @@ import {SvgButton} from './SvgButton';
 import {dataContext} from '../Context';
 import { Break } from './Break';
 import { Audio } from "./Audio";
+import {Color} from './Color';
 function Footer() {
     
     const {Data, setData} = useContext(dataContext)
@@ -24,10 +25,10 @@ function Footer() {
               Break
             </button>
           </article>
+          <Color />
           <SvgButton />
           {Data.break && <Break />}
-          {Data.min === 0&&<Audio />}
-         
+          {Data.min === 0 && <Audio />}
         </section>
       </>
     );

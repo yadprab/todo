@@ -47,7 +47,7 @@ function Input() {
               value={InputVal.TaskName}
               onChange={handleChange}
             />
-            {InputVal.ErrorState && <small>Enter Your TaskName</small>}
+            {InputVal.ErrorState && <small>Enter The TaskName</small>}
           </article>
 
           <button
